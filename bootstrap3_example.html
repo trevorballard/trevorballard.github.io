@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	
+	<!-- Title and description for SEO -->
+	<title>Bootstrap Fun</title>
+	<meta name="description" content="Exploring some of Bootstrap3's features">
+	
+	<!-- Optimize mobile viewport -->
+	<meta name="viewport" content="width=device-width, initialscale=1, maximum-scale=1, user-scalable=no">
+	
+	<!-- Bootstrap CSS -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link href="includes/css/styles_bootstrap3_example.css" rel="stylesheet">
+	
+	<!-- Modernizr -->
+	<script src="includes/js/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+	<div class="container" id="main">
+
+		<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<!-- Group brand and toggle for mobile -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="images/logo.png" alt="your logo"></a>
+				</div><!-- end navbar-header -->
+				
+				<!-- Collect nav links, forms, etc for toggling -->
+				<div class="collapse navbar-collapse" id="responsive-navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Option 1</a></li>
+            					<li><a href="#">Option 2</a></li>
+            					<li><a href="#">Option 3</a></li>
+            					<li class="divider"></li>
+            					<li class="dropdown-header">More Options</li>
+            					<li><a href="#">Option 4</a></li>
+            					<li><a href="#">Option 5</a></li>
+							</ul><!-- end dropdown-menu -->
+						</li><!-- end dropdown -->
+					</ul><!-- end navbar-nav -->
+
+					<!-- Search bar -->
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+          					<input type="text" class="form-control" placeholder="Search">
+        				</div>
+        				<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+					</form><!-- end search -->
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> My Account <span class="caret"></span></a>
+          					<ul class="dropdown-menu" role="menu">
+            					<li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
+            					<li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Update Profile</a></li>
+            					<li><a href="#"><span class="glyphicon glyphicon-credit-card"></span> Billing</a></li>
+            					<li class="divider"></li>
+            					<li><a href="#"><span class="glyphicon glyphicon-off"></span> Sign Out</a></li>
+            				</ul><!-- end dropdown-menu -->
+            			</li><!-- end dropdown -->
+					</ul><!-- end navbar-right -->
+				</div><!-- end responsive-navbar-collapse -->
+			</div><!-- container -->
+		</nav><!-- end navbar -->
+
+
+		<!-- Carousel -->
+		<div class="row">
+			<div class="col-sm-12" id="carousel-col">
+				<div id="carousel-main" class="carousel slide" data-ride="carousel">
+  						
+  					<!-- Indicators -->
+  					<ol class="carousel-indicators">
+  						<li data-target="#carousel-main" data-slide-to="0" class="active"></li>
+  						<li data-target="#carousel-main" data-slide-to="1"></li>
+  						<li data-target="#carousel-main" data-slide-to="2"></li>
+  					</ol>
+						
+  					<!-- Wrapper for slides -->
+  					<div class="carousel-inner" role="listbox">
+  						  	
+  						<div class="item active" id="slide1">
+  						    <div class="carousel-caption">
+  						      	<h4>Slide 1</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua			..</p>
+  						    </div>
+  						</div>
+  						  	
+  						<div class="item" id="slide2">
+  							<div class="carousel-caption">
+  						      	<h4>Slide 2</h4>
+								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  						    </div>
+  						</div>
+  						  
+  						<div class="item" id="slide3">
+  						  	<div class="carousel-caption">
+  						  		<h4>Slide 3</h4>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  						  	</div>
+  						</div>
+					</div><!-- end carousel-inner -->
+
+  					<!-- Controls -->
+  					<a class="left carousel-control" href="#carousel-main" role="button" data-slide="prev">
+  						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  						 <span class="sr-only">Previous</span>
+  					</a>
+  					<a class="right carousel-control" href="#carousel-main" role="button" data-slide="next">
+  						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  						<span class="sr-only">Next</span>
+  					</a>
+				</div><!-- end carousel -->
+			</div><!-- end carousel column -->
+		</div><!-- end carousel row -->
+		
+
+		<!-- Callout -->
+		<div class="row" id="callout">
+			<div class="col-sm-12">
+				
+				<!-- only visible on xs devices -->
+				<button class="btn btn-lg btn-default btn-block visible-xs" id="call"><span class="glyphicon glyphicon-phone"></span> Click to call</button>
+
+				<div class="alert alert-success alert-dismissible fade in" role="alert" id="success-alert">
+					<button type="button" class="close" data-dismiss="alert">
+  						<span aria-hidden="true">&times;</span>
+  						<span class="sr-only">Close</span>
+					</button>
+
+					<h4>Alert</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+				</div><!-- end alert -->
+
+				<div class="well">
+					<div class="page-header">
+						<h1>Callout Header <small>smaller callout subheader</small></h1>
+					</div><!-- end page-header -->
+					
+					<p class="lead">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<a href="" class="btn btn-primary btn-lg" role="button" id="alert-button">Click for an alert</a>
+					<a href="#" class="btn btn-lg btn-link" role="button">or click me instead</a>
+				</div><!-- end well -->
+			</div><!-- end col-12 -->
+		</div><!-- end callout -->
+
+
+		<!-- More Features heading -->
+		<div class="row" id="features-heading">
+			<div class="col-sm-12">
+				<h2>More Features</h2>
+				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
+			</div><!-- end col-12 -->
+		</div><!-- end features heading -->
+
+		<!-- More Features -->
+		<div class="row" id="features">
+			<!-- Feature 1 -->
+			<div class="col-sm-4 feature">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Feature 1</h3>
+					</div><!-- end panel-heading -->
+					<div class="panel-body">
+						<img src="images/orange_badge.jpg" alt="Orange" class="img-circle">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+						<a href="#" class="btn btn-warning btn-block">Button 1</a>
+					</div><!-- end panel body -->
+				</div><!-- end panel 1 -->
+			</div><!-- end feature 1 -->
+
+			<!-- Feature 2 -->
+			<div class="col-sm-4 feature">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Feature 2</h3>
+					</div><!-- end panel-heading -->
+					<div class="panel-body">
+						<img src="images/red_badge.jpg" alt="Red" class="img-circle">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+						<a href="#" class="btn btn-danger btn-block">Button 2</a>
+					</div><!-- end panel body -->
+				</div><!-- end panel 2 -->
+			</div><!-- end feature 2 -->
+
+			<!-- Feature 3 -->
+			<div class="col-sm-4 feature">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Feature 3</h3>
+					</div><!-- end panel-heading -->
+					<div class="panel-body">
+						<img src="images/blue_badge.jpg" alt="Blue" class="img-circle">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+						<a href="#" class="btn btn-info btn-block">Button 3</a>
+					</div><!-- end panel body -->
+				</div><!-- end panel 3 -->
+			</div><!-- end feature 3 -->
+		</div><!-- end features -->
+
+		<div class="row" id="more-info">
+			<div class="col-sm-6">
+				<h3>Tabbable content</h3>
+				<div class="tabpanel">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#tab1" aria-controls="location" role="tab" data-toggle="tab">Section 1</a></li>
+						<li role="presentation"><a href="#tab2" aria-controls="modal" role="tab" data-toggle="tab">Section 2</a></li>
+					</ul><!-- end navtabs -->
+					
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="tab1">
+							<h4><span class="glyphicon glyphicon-map-marker"></span> Location <small>Lorem ipsum dolor sit amet</small></h4>
+
+							<!-- Google maps, pointed to Orlando, FL -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224444.5523938532!2d-81.36874999999996!3d28.481168900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d8fecdbc77%3A0xac3b2063ca5bf9e!2sOrlando%2C+FL!5e0!3m2!1sen!2sus!4v1416159600729" width="455" height="200" frameborder="0" style="border:0"></iframe>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div><!-- end tab1 -->
+
+						<div role="tabpanel" class="tab-pane fade" id="tab2">
+							<h4>A Left Floated Picture <small>Using Placehold.it</small></h4>
+							<img src="http://placehold.it/140" class="thumbnail pull-left" id="tab-pic" alt="Placeholder image">
+							
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<hr>
+
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
+  								<span class="glyphicon glyphicon-new-window"></span> Click for a modal window!
+							</button>
+
+							<!-- Modal -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  	<div class="modal-dialog">
+							    	<div class="modal-content">
+							      		<div class="modal-header">
+							        		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							        		<h4 class="modal-title">A Modal Window</h4>
+							      		</div><!-- end modal-header -->
+							      		
+							      		<div class="modal-body">
+							        		<h4>Text in a modal</h4>
+							        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							        		<h4>Popovers in a modal</h4>
+							        		<button type="button" class="btn btn-danger" data-toggle="popover" data-placement="top" title="Popover title" data-content="Popover text">Click for a popover</button>
+							        		<h4>Tooltips in a modal</h4>
+							        		<a href="" data-toggle="tooltip" data-placement="top" title="Lorem">This link</a> has a tooltip, and so does <a href="" data-toggle="tooltip" data-placement="right" title="Ipsum">this one</a>
+
+							        		<hr>
+
+							        		<p><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit</small></p>
+							        		<form class="form-horizontal" role="form">
+							        			<div class="form-group">
+												    <label for="name" class="col-md-2 control-label">Name</label>
+												    <div class="col-md-10">
+												    	<input type="text" class="form-control" id="name" placeholder="John Smith">
+												    </div><!-- end col-md-10 -->
+												</div><!-- end form-group -->
+												<div class="form-group">
+												    <label for="email" class="col-md-2 control-label">Email</label>
+												    <div class="col-md-10">
+												    	<input type="email" class="form-control" id="email" placeholder="jsmith@example.com">
+												    </div><!-- end col-md-10 -->
+												</div><!-- end form-group -->
+												<div class="form-group">
+												    <label for="message" class="col-md-2 control-label">Message</label>
+												    <div class="col-md-10">
+												    	<textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+												    	<button type="button" class="btn btn-success pull-right">Send</button>
+												    </div><!-- end col-md-10 -->
+												</div><!-- end form-group -->
+							        		</form><!-- end form -->
+							      		</div><!-- end modal-body -->
+							      		
+							      		<div class="modal-footer">
+							        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							        		<button type="button" class="btn btn-primary">Save changes</button>
+							      		</div><!-- end modal-footer -->
+							    	</div><!-- end modal-content -->
+							  	</div><!-- end modal-dialog -->
+							</div><!-- end myModal -->
+						</div><!-- end tab2 -->
+					</div><!-- end tab-content -->
+				</div><!-- end tabpanel -->
+			</div><!-- end col-sm-6 -->
+
+			<div class="col-sm-6">
+				<h3>Some Text Info</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<h4>A List Group</h4>
+				<div class="list-group">
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Item 1</h4>
+						<p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+					</a>
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Item 2</h4>
+						<p class="list-group-item-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+					</a>
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Item 3</h4>
+						<p class="list-group-item-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</a>
+				</div><!-- end list-group -->
+
+				<h5>A small heading</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div><!-- end col-sm-6 -->
+		</div><!-- end more-info -->
+
+		<hr>
+
+		<h3>More Products</h3>
+
+		<div class="thumbnails row">
+			<div class="col-sm-6">
+				<div class="thumbnail">
+					<img src="images/green_product.jpg" alt="Product 1">
+					<div class="label label-success price"><span class="glyphicon glyphicon-tag"></span> <sup>$</sup>XX</div>
+					<div class="caption">
+						<h3>Lorem Ipsum Dolor</h3>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident.</p>
+						<p><a href="#" class="btn btn-primary btn-small">Purchase</a> <a href="#" class="btn btn-small btn-link">Learn more</a></p>
+					</div><!-- end caption -->
+				</div><!-- end thumbnail -->
+			</div><!-- end col-6 -->
+			
+			<div class="col-sm-6">
+				<div class="thumbnail">
+					<img src="images/blue_product.jpg" alt="Product 2">
+					<div class="label label-info price"><span class="glyphicon glyphicon-tag"></span> Free</div>
+					<div class="caption">
+						<h3>Excepteur Sint Occaecat Cupidatat</h3>
+						<p>Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+						<p><a href="#" class="btn btn-primary btn-small" target="">Get it</a> <a href="#" target="" class="btn btn-small btn-link">Learn more</a></p>
+					</div><!-- end caption -->
+				</div><!-- end thumbnail -->
+			</div><!-- end col-6 -->	
+		</div><!-- end thumbnails -->
+	</div><!-- end main -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2">
+					<h6>Copyright &copy; Lorem Ipsum Inc.</h6>
+				</div><!-- end col-sm-2 -->
+
+				<div class="col-sm-4">
+					<h6>About Us</h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div><!-- end col-sm-4 -->
+
+				<div class="col-sm-2">
+					<h6>Navigation</h6>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Links</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div><!-- end col-sm-2 -->
+
+				<div class="col-sm-2">
+					<h6>Follow Us</h6>
+					<ul>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Google Plus</a></li>
+					</ul>
+				</div><!-- end col-sm-2 -->
+
+				<div class="col-sm-2">
+					<h6>Coded by Trevor <span class="glyphicon glyphicon-thumbs-up"></span></h6>
+				</div><!-- end col-sm-2 -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</footer><!-- end footer -->
+
+	<!-- All Javascript at the bottom of the page for faster page loading -->
+		
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+	
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.11.1.min.js"><\/script>')</script>
+	
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="includes/js/script.js"></script>
+
+</body>
+</html>

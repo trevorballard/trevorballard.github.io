@@ -1,199 +1,55 @@
-/*------------------
-	Typography
-------------------*/
-
-body {
-   -webkit-font-smoothing: antialiased;
-   text-rendering: optimizelegibility;
+#wrapper {
+	padding-left: 250px;
+	/*transition: all 0.4s ease 0s;*/
 }
 
-.well .page-header {
-   margin-top: 0;
+#sidebar-wrapper {
+	margin-left: -250px;
+	left: 250px;
+	width: 250px;
+	background: #000;
+	position: fixed;
+	height: 100%;
+	overflow-y: auto;
+	z-index: 1000;
+	/*transition: all 0.4s ease 0s;*/
+
+	background-color: blue;
+
 }
 
-.well .page-header h1 {
-   margin-top: 0;
-}
-
-
-/*---------------
-	Navbar
----------------*/
-   
-#searchInput {
-   width: 200px;
-}
-
-.navbar-brand {
-   padding: 13px 15px;
-}
-
-
-/*---------------
-	Carousel
----------------*/
-
-#carousel-main {
-	margin-top: 60px;
-}
-
-#carousel-main .item {
-	height: 400px;
-}
-
-#slide1 {
-	background: url("../../images/blue_medium.jpg") top center no-repeat;
-}
-
-#slide2 {
-	background: url("../../images/purple_medium.jpg") top center no-repeat;
-}
-
-#slide3 {
-	background: url("../../images/grey_medium.jpg") top center no-repeat;
-}
-
-/*-------------------
-	More Features
--------------------*/
-
-#features {
-	text-align: center;
-}
-
-.features img {
-	margin: 0 0 20px;
-}
-
-
-/*---------------
-	Footer
----------------*/
-
-footer {
-	background: #333;
-   	color: #eee;
-   	font-size: 11px;
-   	padding: 20px;
-}
-
-footer ul {
-	list-style: none;
-	padding: 0;
-}
-
-
-/*---------------
-	Global
----------------*/
-
-.well {
-	margin: 20px 0;
-}
-
-.alert {
-	margin-top: 20px;
-	display: none;
-}
-
-#call {
-	margin-top: 20px;
-}
-
-iframe {
+#page-content-wrapper {
 	width: 100%;
 }
 
-#tab-pic {
-	margin-right: 20px;
+.sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-#form-button {
-	text-align: center;
-}
+/* TODO: examine media queries when designing for mobile */
+@media (max-width:767px) {
 
-#message {
-	margin-bottom: 20px;
-}
-
-.thumbnail {
-   position: relative;
-}
-
-.thumbnail h3 {
-   font-size: 16px;
-   margin: 0 0 10px;
-   line-height: 20px;
-}
-
-.thumbnail .price {
-   font-size: 22px;
-   font-weight: normal;
-   position: absolute;
-   top: -10px;
-   right: -10px;
-   padding: 10px;
-}
-
-.thumbnail .price sup {
-   font-weight: normal;
-   font-size: 12px;
-}
-
-.thumbnail span.glyphicon {
-   margin-right: 5px;
-}
-
-/*------------------
-	Media Queries
-------------------*/
-
-/* Phones (portrait or landscape) */
-@media (max-width: 480px) {
-	.thumbnail .price {
-      font-size: 14px;
-   }
-
-   .thumbnail .price sup {
-      font-size: 10px;
-   }
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-
-	#carousel-main .item {
-		height: 310px;
+	#wrapper {
+		padding-left: 0;
 	}
 
-	#slide1 {
-		background: url("../../images/blue_small.jpg") top center no-repeat;
+	#sidebar-wrapper {
+		left: 0;
 	}
 
-	#slide2 {
-		background: url("../../images/purple_small.jpg") top center no-repeat;
+	#wrapper.active {
+		position: relative;
+		left: 250px;
 	}
 
-	#slide3 {
-		background: url("../../images/grey_small.jpg") top center no-repeat;
-	}
-}
-
-/* Large desktop */
-@media (min-width: 1200px) {
-	#carousel-main .item {
-		height: 500px;
-	}
-
-	#slide1 {
-		background: url("../../images/blue_large.jpg") top center no-repeat;
-	}
-
-	#slide2 {
-		background: url("../../images/purple_large.jpg") top center no-repeat;
-	}
-
-	#slide3 {
-		background: url("../../images/grey_large.jpg") top center no-repeat;
+	#wrapper.active #sidebar-wrapper {
+		left: 250px;
+		width:250px;
+		transition: all 0.4s ease 0s;
 	}
 }
